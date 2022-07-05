@@ -1,0 +1,29 @@
+{
+	"files": [
+		"vue-shim.d.ts"
+	],
+	"vueCompilerOptions": {
+	  "target": 2.7
+	},
+	"compilerOptions": {
+		"jsx": "preserve",
+		"module": "esnext",
+		"target": "es5",
+		"sourceMap": true,
+		"moduleResolution": "node",
+		"experimentalDecorators": true,
+		"resolveJsonModule": true,
+		"allowSyntheticDefaultImports": true,
+		"baseUrl": "./",
+		"paths": {
+			"_scss/*": ["./src/scss/*"],
+			"_ts/*": ["./src/ts/*"]
+		}
+	},
+	"exclude": [
+		"node_modules"
+	],
+	"include": [
+		"./src/**/*"
+	]
+}

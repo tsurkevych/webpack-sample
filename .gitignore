@@ -1,0 +1,21 @@
+## IDE support
+.settings
+.idea
+# .vscode
+.history
+.vs
+.favorites.json
+
+## -- node.js --
+node_modules
+.temp_cache
+
+## -- map --
+*.map
+
+# -- MacOS --
+.DS_Store
+._.DS_Store
+
+## ---build---
+dist
