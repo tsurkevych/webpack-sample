@@ -293,8 +293,8 @@ module.exports = ({ serve }, argv) => {
 			]
 		},
 		devtool:   argv.mode === 'development' ? 'eval-source-map' : false,
-		devServer:
-			{
+		devServer: serve
+			&& {
 				static: {
 					directory: path.join(__dirname, 'dist')
 				},
