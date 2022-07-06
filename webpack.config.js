@@ -234,7 +234,7 @@ module.exports = ({ serve }, argv) => {
 			splitChunks: {
 				chunks:                 'all',
 				minSize:                10,
-				minChunks:              2,
+				minChunks:              4,
 				cacheGroups:            {
 					defaultVendors: {
 						test:     /[\\/]node_modules[\\/]/,
@@ -242,7 +242,7 @@ module.exports = ({ serve }, argv) => {
 					},
 					default: {
 						name:               'commons',
-						minChunks:          2,
+						minChunks:          4,
 						priority:           -20,
 						reuseExistingChunk: true
 					}
