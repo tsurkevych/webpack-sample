@@ -3,12 +3,12 @@
 		div
 			v-tabs
 				v-tab(
-					to='/'
+					@click='$router.push({ path: "/" })'
 				)
 					v-icon(color="blue darken-2") {{ mdiHome }}
 					| home
 				v-tab(
-					to='/about/'
+					@click='$router.push({ path: "/about/" })'
 				)
 					v-icon(color="blue darken-2") {{ mdiInformationOutline }}
 					| about
