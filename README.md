@@ -4,24 +4,25 @@
 > **install modules**
 
 ``` bash
-$ npm install
+$ npm install --global yarn
+$ yarn install
 ```
 
 ## Compiles for example
 
 ``` bash
-$ npm run serve
+$ yarn serve
 ```
 
 ## Compiles for development
 
 ``` bash
-$ npm run dev
+$ yarn dev
 ```
 
 ## Compiles and minifies for production
 
 ``` bash
-$ npm run build
+$ yarn build
 ```
 
