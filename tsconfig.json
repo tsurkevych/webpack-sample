@@ -1,9 +1,7 @@
 {
-	"files": [
-		"vue-shim.d.ts"
-	],
+	"files": ["vue-shim.d.ts"],
 	"vueCompilerOptions": {
-	  "target": 2.7
+		"target": 2.7
 	},
 	"compilerOptions": {
 		"jsx": "preserve",
@@ -20,10 +18,6 @@
 			"_ts/*": ["./src/ts/*"]
 		}
 	},
-	"exclude": [
-		"node_modules"
-	],
-	"include": [
-		"./src/**/*"
-	]
+	"exclude": ["node_modules"],
+	"include": ["./src/**/*"]
 }
