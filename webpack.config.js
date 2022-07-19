@@ -10,25 +10,12 @@ module.exports = ({ serve }, argv) => {
 	const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 	const StylelintPlugin = require('stylelint-webpack-plugin');
 	const ESLintPlugin = require('eslint-webpack-plugin');
-	const { VuetifyLoaderPlugin } = require('vuetify-loader');
 
 	/* clear */
 	[ 'dist' ].forEach(element => fs.removeSync(element));
 	console.info('Файли видалено');
 
 	/* \ clear */
-
-	/* timestamp  */
-	const T = Number(new Date());
-
-	fs.mkdirSync('dist');
-	fs.stat('dist/includes', function(err) {
-		if (err && err.code === 'ENOENT') fs.mkdirSync('dist/includes');
-		fs.writeFile(path.resolve(__dirname, 'dist/includes/releaseSalt.php'), `<? $releaseSalt = "${T}"; ?>`);
-	});
-	console.info(`timestamp: ${T} 🌍`);
-
-	/* \ timestamp */
 
 	const pl = [];
 
@@ -215,12 +202,10 @@ module.exports = ({ serve }, argv) => {
 				dependencies:      true,
 				dependenciesCount: 10000,
 				percentBy:         null
-			}),
-			new VuetifyLoaderPlugin()
+			})
 		],
 		resolve: {
 			alias: {
-				vue$:  'vue/dist/vue.runtime.esm.js',
 				_scss:  path.resolve(__dirname, 'src/scss'),
 				_ts:    path.resolve(__dirname, 'src/ts')
 			},
